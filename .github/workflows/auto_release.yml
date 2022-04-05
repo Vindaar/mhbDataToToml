@@ -23,13 +23,11 @@ jobs:
       - name: Install Nim dependencies
         shell: sh
         run: |
-          cd databaseToToml
           nimble install -d -y
 
       - name: Build binary
         shell: sh
         run: |
-          cd databaseToToml
           nimble muslBuild
           nim strip databaseToToml
           nim upx databaseToToml
@@ -39,4 +37,4 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: |
-            databaseToToml/databaseToToml
+            databaseToToml
