@@ -1,0 +1,7 @@
+* v0.1.1
+- depend on custom branch of =parsetoml= to generate correctly looking
+  TOML files (for multi line strings) until
+  https://github.com/NimParsers/parsetoml/issues/55
+  has a solution
+* v0.1.0
+- initial release including GH action to build static binary

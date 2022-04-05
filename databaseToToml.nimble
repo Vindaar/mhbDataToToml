@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.1.1"
 author        = "Vindaar"
 description   = "Tool to extract MHB data from DB"
 license       = "MIT"
@@ -17,7 +17,7 @@ requires "datamancer >= 0.2.1"
 # is merged (now done)
 # and we have found a solution for
 # https://github.com/NimParsers/parsetoml/issues/55
-requires "https://github.com/Vindaar/parsetoml@#mhbTestBranch"
+requires "https://github.com/Vindaar/parsetoml#mhbTestBranch"
 
 task muslBuild, "Builds a static binary using musl":
   exec "nim musl -d:release -d:mariadb -d:ssl -f databaseToToml.nim"
